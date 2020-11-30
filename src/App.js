@@ -1,5 +1,5 @@
 import React from 'react';
-
+/*
 function App() {
   return (
     <React.Fragment>
@@ -8,6 +8,7 @@ function App() {
     </React.Fragment>
   )
 }
+*/
 /* JSX -> JavaScript
 function App() {
   return React.createElement(
@@ -17,4 +18,18 @@ function App() {
   );
 }
 */
+
+const App = () => {
+  return (
+  <div>
+    <Cat />
+    <Cat />
+    <Cat />
+  </div>)
+}
+
+const Cat = () => {
+  return <div>Meow!</div>
+}
+
 export default App;
