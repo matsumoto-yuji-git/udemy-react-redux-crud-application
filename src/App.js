@@ -20,16 +20,28 @@ function App() {
 */
 
 const App = () => {
+  const profiles = [
+    {name: "Taiga", age: 4800},
+    {name: "Taitas", age: 9000},
+    {name: "Fooma", age: 5000},
+    {name: "defaultraman"}
+  ]
   return (
   <div>
-    <Cat />
-    <Cat />
-    <Cat />
+    {
+      profiles.map ((profile, index) => {
+        return <User name={profile.name} age={profile.age} key={index} />
+      })
+    }
   </div>)
 }
 
-const Cat = () => {
-  return <div>Meow!</div>
+const User = (props) => {
+return <div>Hi! I am {props.name}, and {props.age} years old!!</div>
+}
+
+User.defaultProps = {
+  age: 20000
 }
 
 export default App;
